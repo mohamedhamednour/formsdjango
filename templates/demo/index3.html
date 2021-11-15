@@ -1,0 +1,38 @@
+{% extends 'demo/index1.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block name %}
+<table align="center" style="width:50%" border="4" class="table table-striped table-hover">
+     <thead>
+    <tr>
+
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">ig</th>
+        <th scope="col">track</th>
+        <th scope="col">delate</th>
+
+    </tr>
+     {% for i in e %}
+     <tr>
+         <td><a ><h1>{{i.id}}</h1></a></td>
+         <td><a href="{% url 'lin' i.id%}"><h1>{{i.name}}</h1></a></td>
+         <td><h1>{{i.age}}</h1></td>
+         <td><h1>{{i.track}}</h1></td>
+         <td><button  class="btn btn-danger"><a style="color:white" href="{% url 'delate' i.id%}">delate</a></button></td>
+
+
+
+     </tr>
+     {% endfor %}
+  ...
+</table>
+{% endblock name %}
+</body>
+</html>

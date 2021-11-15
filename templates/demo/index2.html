@@ -1,0 +1,24 @@
+{% extends 'demo/index1.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% block name %}
+<div align="center">
+
+    {% for n in d %}
+    <h1>{{n.name}}</h1><br>
+    <h1>{{n.age}}</h1><br>
+    <h1>{{n.track}}</h1>
+
+    <button><a href="{% url 'bac' %}">back</a></button>
+    {% endfor %}
+    </div>
+{% endblock name %}
+
+</body>
+</html>

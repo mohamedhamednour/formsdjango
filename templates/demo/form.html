@@ -1,0 +1,32 @@
+{% extends 'demo/index1.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block name %}
+
+    <form method="POST">
+    {% csrf_token %}
+
+
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+
+    <label class="form-label">age</label>
+    <input type="text" name="age" class="form-control" >
+
+      <label  class="form-label">track</label>
+    <input type="text" name="track" class="form-control" >
+
+
+  <br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock name %}
+
+</body>
+</html>
