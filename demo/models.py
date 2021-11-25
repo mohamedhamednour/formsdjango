@@ -11,4 +11,6 @@ class Foorm(models.Model):
     # id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     passw = models.IntegerField(max_length=20)
+    # passw2 = models.IntegerField(max_length=20)
+
 

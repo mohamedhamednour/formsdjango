@@ -8,6 +8,8 @@
 <body>
 
 {% block name %}
+{% if user.is_authenticated %}
+
 <div align="center">
 
     {% for n in d %}
@@ -18,6 +20,7 @@
     <button><a href="{% url 'bac' %}">back</a></button>
     {% endfor %}
     </div>
+{% endif %}
 {% endblock name %}
 
 </body>

@@ -6,9 +6,12 @@
     <title>Title</title>
 </head>
 <body>
+
 {% block name %}
+{% if user.is_authenticated %}
 
     <form method="POST">
+
     {% csrf_token %}
 
 
@@ -25,8 +28,11 @@
 
   <br>
   <button type="submit" class="btn btn-primary">Submit</button>
+
 </form>
+{% endif %}
 {% endblock name %}
+
 
 </body>
 </html>

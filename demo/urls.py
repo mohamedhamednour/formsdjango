@@ -25,6 +25,11 @@ urlpatterns = [
     path('idd/<int:st_id>/', views.iD , name='lin'),
     path('del/<int:st_i>/', views.delate , name='delate'),
     path('form', views.form, name='form'),
-    path('login', views.login, name='login')
+    path('login', views.login, name='login'),
+    path('form2', views.addnew , name='form2'),
+    path('lo', views.loginbase, name='sign'),
+    path('logut', views.logOut , name='logout'),
+    path('hi/',views.vi),
+    path('APi', views.Apostudent.as_view() , name='APIS')
 
 ]
